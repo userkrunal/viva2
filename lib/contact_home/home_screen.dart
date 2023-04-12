@@ -6,6 +6,7 @@ class Home_Screen extends StatefulWidget {
   @override
   State<Home_Screen> createState() => _Home_ScreenState();
 }
+ContacModel contacModel=ContacModel();
 List l1=[
   ContacModel(name: "Anna Arletti",mobile: "+39 3280345089",image: "assets/woman.png"),
   ContacModel(name: "Alex Solleri",mobile: "+39 3450345089",image: "assets/man1.jpg"),
@@ -75,6 +76,15 @@ class _Home_ScreenState extends State<Home_Screen> {
         ],
         ),
       ) ,
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, 'add').then((value) {
+            setState(() {
+
+            });
+          },);
+        },child: Icon(Icons.add),
+      ),
     ));
   }
   Widget box(ContacModel cm,index)
